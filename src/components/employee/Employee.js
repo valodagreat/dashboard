@@ -57,9 +57,9 @@ class Employee extends Component {
                     <button onClick={this.addProduct} type="button" className="btn aqua-gradient btn-rounded m-3">add project</button></div>
                     }{
                         this.props.route === 'noProduct' ? null : <div className='p-5 post'><h4 className='p-2'>Add Project</h4>
-                            <div className='p-2'>
+                            <div className='text-center p-2'>
                             <label htmlFor='projectTitle'>Title <input type="text" required name="projectTitle"  onChange={this.props.titleChange} /> </label></div>
-                            <div className='p-2'>
+                            <div className='text-center p-2'>
                             <label htmlFor='projectUrl'>Link <input type="text" name="projectUrl" required  onChange={this.props.urlChange} /> </label></div>
                             <div className='p-2'>
                             <button onClick={this.includeProduct} className='btn aqua-gradient  btn-rounded'>Submit</button>
