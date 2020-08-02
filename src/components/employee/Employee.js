@@ -46,7 +46,7 @@ class Employee extends Component {
                     <p className='p-3'><img className='p-2 rounded-circle z-depth-0' src='https://res.cloudinary.com/valodagreat/image/upload/v1596154086/employ_2_l3js3z.png' height='65' alt='stuff'/> 
                     <span className='employ'>All Employees</span></p>
                     <h5 className='p-3 s'>Projects</h5>
-                    {this.state.project.map(user =><p key={user.project} className='p-3'><img className='p-2 rounded-circle z-depth-0' src={user.url} height='65' alt='stuff'/> 
+                    {this.state.project.map(user =><p key={user.project} className='p-3'><img className='p-2 rounded-circle z-depth-0' src={user.url} height='65' width='65' alt='stuff'/> 
                     <span className='employ'>{user.project}</span></p>)}
                     <h5 className='p-3 s'>Status</h5>
                     <p className='p-3'><img className='p-2 rounded-circle z-depth-0' src='https://res.cloudinary.com/valodagreat/image/upload/v1596159400/w8udl2lhrno3qie9lwdf.jpg' height='65' alt='stuff'/> 
