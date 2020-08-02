@@ -1,0 +1,35 @@
+
+.bredth{
+    width: 60%;
+}
+.beneath{
+    background-color: #FFFFFF;
+}
+.p{
+    color:#bdbdbd
+}
+.set{
+    width : 173px;
+}
+.h{
+    height: 88px;
+}
+.cursor{
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+    .media{
+        display : flex;
+        flex-direction: column;
+    }
+    .bredth{
+        width: 100% !important;
+    }
+    .set{
+        width : 100%;
+    }
+    .h{
+        height: auto;
+    }
+}
+
