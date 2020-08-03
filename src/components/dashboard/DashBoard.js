@@ -50,7 +50,16 @@ class DashBoard extends Component {
             })
         }).then(res => res.json())
         .then(data => {
-            this.setState({ employee : data})
+            this.setState({
+                employee : data,
+                name : "",
+                position : "",
+                salary : "",
+                status : "",
+                trial : "",
+                period : "",
+                url : "",
+            })
         }).catch(err=>console.log(err))
     }
 
