@@ -3,7 +3,6 @@ import './Employee.css'
 
 class Employee extends Component {
     state={
-        selectedFile : null,
         project : [
     ]}
     
@@ -27,7 +26,7 @@ class Employee extends Component {
             },
             body: JSON.stringify({
                 name : this.props.title,
-                url : this.state.selectedFile
+                url : this.props.url
             })
         }).then(res => res.json())
         .then(data => {
@@ -35,14 +34,8 @@ class Employee extends Component {
             this.setState({ project: data})
         }).catch(err=>console.log(err))
     }
-
     cancelSubmit=()=>{
         this.props.onRouteChange('noProduct')
-    }
-
-    fileChangedHandler = event => {
-        console.log(URL.createObjectURL(event.target.files[0]))
-        this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) })
     }
 
     render() {
@@ -67,8 +60,7 @@ class Employee extends Component {
                             <div className='text-center p-2'>
                             <label htmlFor='projectTitle'>Title <input type="text" required name="projectTitle"  onChange={this.props.titleChange} /> </label></div>
                             <div className='text-center p-2'>
-                            <label htmlFor='projectUrl'>Link <input type="text" name="projectUrl" required  onChange={this.props.urlChange} /></label></div>
-                            <div><input type="file" onChange={this.fileChangedHandler}/></div>
+                            <label htmlFor='projectUrl'>Link <input type="text" name="projectUrl" required  onChange={this.props.urlChange} /> </label></div>
                             <div className='p-2'>
                             <button onClick={this.includeProduct} className='btn aqua-gradient  btn-rounded'>Submit</button>
                             <button onClick={this.cancelSubmit} className='btn aqua-gradient  btn-rounded'>Cancel</button>
